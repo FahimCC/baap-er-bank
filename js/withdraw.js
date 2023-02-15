@@ -5,7 +5,15 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
 
 	const previousBalance = getPreviousAmount('balance');
 
-	const totalWithdrawAmount = newWithdrawAmount + previousWithdrawAmount;
+	// const totalWithdrawAmount = newWithdrawAmount + previousWithdrawAmount;
+
+	// validation
+	let totalWithdrawAmount;
+	if (newWithdrawAmount === -1.0) {
+		totalWithdrawAmount = previousWithdrawAmount.toString().padStart(2, '0');
+	} else {
+		totalWithdrawAmount = newWithdrawAmount + previousWithdrawAmount;
+	}
 
 	const totalBalance = previousBalance - totalWithdrawAmount;
 

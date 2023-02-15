@@ -5,7 +5,15 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
 
 	const previousBalance = getPreviousAmount('balance');
 
-	const totalDepositAmount = newDepositAmount + previousDepositAmount;
+	// const totalDepositAmount = newDepositAmount + previousDepositAmount;
+
+	// validation
+	let totalDepositAmount;
+	if (newDepositAmount === -1.0) {
+		totalDepositAmount = previousDepositAmount.toString().padStart(2, '0');
+	} else {
+		totalDepositAmount = newDepositAmount + previousDepositAmount;
+	}
 
 	const totalBalance = previousBalance + totalDepositAmount;
 
