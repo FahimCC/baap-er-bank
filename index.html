@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Baap er bank</title>
+
+		<!-- Tailwind CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							// gold: '#B68C5A',
+						},
+						fontFamily: {
+							// garamond: ['EB Garamond', 'serif'],
+						},
+					},
+					container: {
+						center: true,
+						padding: {
+							DEFAULT: '1rem',
+							md: '3rem',
+							lg: '6rem',
+							xl: '7rem',
+							'2xl': '8rem',
+						},
+					},
+				},
+			};
+		</script>
+	</head>
+	<body
+		class="container md:container lg:container bg-slate-800 text-white flex flex-col justify-center h-full lg:h-screen"
+	>
+		<header>
+			<h1 class="text-center text-5xl">
+				<span class="font-semibold text-teal-400">Baap er Bank</span>!!!!
+			</h1>
+		</header>
+		<main class="my-10">
+			<section class="w-1/2 mx-auto bg-slate-500 p-10 rounded-lg">
+				<h3 class="text-center my-2 text-3xl font-medium">Please Login</h3>
+				<div class="flex flex-col justify-center">
+					<input
+						class="text-black block px-4 py-2 my-2 w-4/5 mx-auto rounded-lg focus:outline-none"
+						type="email"
+						name=""
+						id="user-email"
+						placeholder="Enter Your Email Address..."
+					/>
+					<input
+						class="block my-2 px-4 py-2 w-4/5 mx-auto rounded-lg focus:outline-none text-black"
+						type="password"
+						name=""
+						id="user-password"
+						placeholder="Enter Your Password..."
+					/>
+					<button
+						class="w-1/5 mx-auto my-2 px-4 py-2 bg-slate-800 rounded-lg hover:bg-slate-700"
+						type="submit"
+						id="user-btn"
+					>
+						Login
+					</button>
+				</div>
+			</section>
+		</main>
+		<script src="js/login.js"></script>
+	</body>
+</html>

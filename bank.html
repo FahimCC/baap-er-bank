@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Baap er Bank</title>
+		<!-- Tailwind CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							// gold: '#B68C5A',
+						},
+						fontFamily: {
+							// garamond: ['EB Garamond', 'serif'],
+						},
+					},
+					container: {
+						center: true,
+						padding: {
+							DEFAULT: '1rem',
+							md: '3rem',
+							lg: '6rem',
+							xl: '7rem',
+							'2xl': '8rem',
+						},
+					},
+				},
+			};
+		</script>
+	</head>
+	<body
+		class="container md:container lg:container bg-slate-800 text-white flex flex-col justify-center align-center h-full lg:h-screen"
+	>
+		<header class="mt-6">
+			<h1 class="text-center text-5xl">
+				Welcome to
+				<span class="font-semibold text-teal-400">Baap er Bank</span>!!!!
+			</h1>
+		</header>
+		<main class="my-10">
+			<section class="my-10">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
+					<div class="bg-green-400 p-8 rounded-lg">
+						<h5 class="text-2xl">Deposit</h5class>
+						<h2 class="text-5xl">$<span id="deposit-amount">00</span></h2>
+					</div>
+					<div class="bg-red-400 p-8 rounded-lg">
+						<h5 class="text-2xl">Withdraw</h5class>
+						<h2 class="text-5xl">$<span id="withdraw-amount">00</span></h2>
+					</div>
+					<div class="bg-orange-400 p-8 rounded-lg">
+						<h5 class="text-2xl">Balance</h5class>
+						<h2 class="text-5xl">$<span id="balance">1240</span></h2>
+					</div>
+				</div>
+			</section>
+			<section class="my-10">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
+					
+					<div class="bg-lime-400 p-8 rounded-lg">
+						<h5 class="text-2xl">Please Deposit</h5>
+						<input type="text" id="new-deposit-amount" class="focus:outline-none text-black block w-4/5 my-2 px-4 py-2 text-lg rounded-lg"  placeholder="Enter deposit amount">
+                        <button id="deposit-btn" type="submit" class="px-4 py-2 my-2 bg-green-400 hover:bg-green-500 text-lg rounded-lg">Deposit</button>
+					</div>
+
+                    <div class="bg-purple-400 p-8 rounded-lg">
+						<h5 class="text-2xl my-2">Please Withdraw</h5>
+                        <input type="text" id="new-withdraw-amount" class="focus:outline-none text-black block w-4/5 my-2 px-4 py-2 text-lg rounded-lg"  placeholder="Enter withdraw amount">
+                        <button id="withdraw-btn" type="submit" class="focus:outline-none px-4 py-2 my-2 bg-red-400 hover:bg-red-500 text-lg rounded-lg">Withdraw</button>
+					</div>
+				</div>
+			</section>
+		</main>
+        <script src="js/deposit.js"></script>
+        <script src="js/withdraw.js"></script>
+        <script src="js/utilities.js"></script>
+	</body>
+</html>
