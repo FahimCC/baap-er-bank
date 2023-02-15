@@ -3,7 +3,11 @@ function getNewAmount(id) {
 	document.getElementById(id).value = '';
 
 	// validation
-	if (parseFloat(amount) < 0.0 || isNaN(parseFloat(amount)) === true) {
+	if (
+		parseFloat(amount) < 0.0 ||
+		isNaN(parseFloat(amount)) === true ||
+		amount.includes(',') === true
+	) {
 		alert('Please enter a valid amount');
 		return -1.0;
 	} else {
